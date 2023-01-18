@@ -1,0 +1,77 @@
+{
+  "login" : [
+    {"email": "john@gmail.com", "password": "John1234"}
+  ],
+  "restaurant": [
+    {
+      "id": 1,
+      "name": "PizzaHut",
+      "address": "Karachi",
+      "rating": "4.9",
+      "email": "pizzahut@test.com"
+    },
+    {
+      "id": 2,
+      "name": "McDonald",
+      "address": "Lahore",
+      "rating": "4.0",
+      "email": "mcdonald@test.com"
+    },
+    {
+      "id": 3,
+      "name": "Shainwari Restaurant",
+      "address": "Karachi",
+      "rating": "4.4",
+      "email": "shinwari@test.com"
+    },
+    {
+      "id": 4,
+      "name": "PizzaFast",
+      "address": "Islamabad",
+      "rating": "4.2",
+      "email": "pizzafast@test.com"
+    },
+    {
+      "id": 5,
+      "name": "KFC",
+      "address": "Karachi",
+      "rating": "4.7",
+      "email": "kfc@test.com"
+    },
+    {
+      "id": 6,
+      "name": "Fast Food Restaurant",
+      "address": "Karachi",
+      "rating": "4.5",
+      "email": "fastfoodRestaurant@test.com"
+    },
+    {
+      "id": 7,
+      "name": "K&B's",
+      "address": "Karachi",
+      "rating": "4.0",
+      "email": "k&b's@test.com"
+    },
+    {
+      "id": 8,
+      "name": "Kababjee Restaurant",
+      "address": "Karachi",
+      "rating": "4.8",
+      "email": "kababjee@test.com"
+    },
+    {
+      "id": 9,
+      "name": "Havali Restaurant",
+      "address": "Karachi",
+      "rating": "4.5",
+      "email": "havalirestaurant@test.com"
+    },
+    {
+      "id": 10,
+      "name": "BBQ Food",
+      "address": "Islamabad",
+      "rating": "4.1",
+      "email": "bbqFood@test.com"
+    }
+  ]
+}
