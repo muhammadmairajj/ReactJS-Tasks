@@ -1,0 +1,15 @@
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.UI-cards{
+    border: 1px solid #5D5374;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+}
+.UI-cards:hover{
+    box-shadow: 0px 0px 4px #5D5374;
+}

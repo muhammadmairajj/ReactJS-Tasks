@@ -1,0 +1,78 @@
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
+
+export default function RestaurantSearch() {
+  const [query, setQuery] = useState("");
+  const [restaurantData, setRestaurantData] = useState([]);
+  const [error, setError] = useState(false);
+  const [lastSearch, setLastSearch] = useState('');
+
+    useEffect(() => {
+      fetchData();
+    }, [query]);
+    
+    const fetchData = async () => {
+      console.log("query ---> ", query);
+      setLastSearch(query);
+          const res = await axios.get(`http://localhost:3000/restaurant/?q=${query}`);
+          // console.log(res.data);
+          setRestaurantData(res.data);
+          // setLastSearch(query);
+        // fetchData();
+        if(query.length > 0 || query.length > 2) {
+          fetchData();
+          setError(false);
+        }
+        else {
+          setError(true);
+          setLastSearch('');
+          // setRestaurantData('');
+        }
+    }
+  // useEffect(()=>{
+  //   const fetchData = async () => {
+  //     const res = await axios.get(`http://localhost:3000/restaurant/?q=${query}`);
+  //     // console.log(res.data);
+  //     setRestaurantData(res.data);
+  //     setLastSearch(query);
+  //   }
+  //   // fetchData();
+  //   if(query.length > 0 || query.length > 2) {
+  //     fetchData();
+  //     setError(false);
+  //   }
+  //   else {
+  //     setError(true);
+  //   }
+  // }, [query])
+
+  const deleteData = (id) => {
+    axios.delete(`http://localhost:3000/restaurant/${id}`)
+    // fetchData();
+    alert("Data has been Deleted");
+    fetchData(lastSearch);
+    
+  }
+  return (
+    <div>
+        <h1>RestaurantSearch</h1>
+        <input type="search" className='search' placeholder="Search" onChange={(e) => setQuery(e.target.value.toLowerCase())}  />
+          <ul>
+          { 
+            restaurantData ?
+            restaurantData.filter((a) => 
+            a.name.toLowerCase().includes(query)
+            ).map((item) => (
+              <div key={item.id}>
+              <li >{item.name}</li>
+              <button onClick={() => deleteData(item.id)}>Delete</button>
+              </div>
+            ))
+            : <h2>No Data</h2>
+          }
+          </ul>
+    </div>
+  )
+}
+
+// export default RestaurantSearch;

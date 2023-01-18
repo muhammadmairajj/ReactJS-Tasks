@@ -1,0 +1,70 @@
+.form-todo {
+    width: 500px;
+    height: auto;
+    margin: auto;
+}
+.form-todo .input-and-button {
+    height: 45px;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+}
+
+.form-todo .input-and-button input{
+    width: 92%;
+    height: 100%;
+    text-indent: 2px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.form-todo .input-and-button .button{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1px;
+}
+.form-todo .input-and-button .button button {
+    outline: none;
+    cursor: pointer;
+}
+
+.form-and-todo-box .input-and-button .button.edit{
+    width: auto;
+    padding: 0px 10px;
+  }
+  .todo{
+    margin: 15px 0px;
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .todo input{
+    margin-right: 5px;
+  }
+  .todo span {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .todo .edit-and-delete-btn{
+    display: flex;
+    cursor: pointer;
+  }
+  /* .todo .edit-and-delete-btn .trash {
+    color: red;
+  }
+  
+  .todo .edit-and-delete-btn .edit {
+    color: green;
+  } */
+  .delete-all{
+    padding: 10px;
+    cursor: pointer;
+  }
